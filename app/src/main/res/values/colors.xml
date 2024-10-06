@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="query_background">#C4C4C4</color>
+    <color name="hintcolor">#FFFFFF</color>
+    <color name="yellow">#FFCA45</color>
+    <color name="state_selected">#80FFCA45</color>
+    <color name="state_default">#001C29</color>
+    <color name="red">#FF0000</color>
+</resources>

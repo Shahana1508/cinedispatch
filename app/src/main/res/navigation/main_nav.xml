@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/onboardFragment">
+
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.example.cinedispatch.ui.home.OnboardFragment"
+        android:label="fragment_onboard"
+        tools:layout="@layout/fragment_onboard" >
+        <action
+            android:id="@+id/action_onboardFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/onboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_onboardFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/onboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.cinedispatch.ui.Auth.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_logInFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.cinedispatch.ui.Auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_logInFragment"
+            app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cinedispatch.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_watchedMoviesFragment"
+            app:destination="@id/watchedMoviesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuReviewsFragment"
+            app:destination="@id/menuReviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.cinedispatch.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.example.cinedispatch.ui.movies.WatchlistFragment"
+        android:label="fragment_watchlist"
+        tools:layout="@layout/fragment_watchlist" >
+        <action
+            android:id="@+id/action_watchlistFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.cinedispatch.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.cinedispatch.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_watchlistFragment"
+            app:destination="@id/watchlistFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_watchedMoviesFragment"
+            app:destination="@id/watchedMoviesFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_detailFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchedMoviesFragment"
+        android:name="com.example.cinedispatch.ui.movies.WatchedMoviesFragment"
+        android:label="fragment_watched_movies"
+        tools:layout="@layout/fragment_watched_movies" >
+        <action
+            android:id="@+id/action_watchedMoviesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.cinedispatch.ui.reviews.ReviewFragment"
+        android:label="fragment_review"
+        tools:layout="@layout/fragment_review" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuReviewsFragment"
+        android:name="com.example.cinedispatch.ui.reviews.MenuReviewsFragment"
+        android:label="fragment_menu_reviews"
+        tools:layout="@layout/fragment_menu_reviews" />
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.cinedispatch.ui.bottomsheet.bottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </dialog>
+</navigation>

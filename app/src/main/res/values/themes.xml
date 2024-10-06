@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Cinedispatch" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">#001C29</item>
+        <item name="android:navigationBarColor">#001C29</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+    <style name="Theme.Cinedispatch" parent="Base.Theme.Cinedispatch" />
+    <style name="customToast">
+        <item name="stColorBackground">#FFCA45</item>
+        <item name="stTextColor">#001C29</item>
+        <item name="stTextBold">true</item>
+    </style>
+    <style name="TextAppearance.BottomNavigation.Title" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/poppins_thin</item> <!-- Custom font -->
+    </style>
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="MenuItemTextSize">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+</resources>

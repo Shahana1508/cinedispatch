@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#002335"
+        tools:context=".ui.reviews.ReviewFragment">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/reviewposter"
+            android:layout_width="144dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedImageViewStyle"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/back_button_review"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/backbutton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movie_name"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button_review" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Watched on"
+            android:textColor="#D4DADD"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_name" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/vector__4_"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/movie_name" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="TextView"
+            android:textColor="#FFFFFFCC"
+            android:textSize="12dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView26"
+            app:layout_constraintTop_toBottomOf="@+id/movie_name" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Rate"
+            android:textColor="#D4DADD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewposter" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="280dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:maxHeight="57dp"
+            android:minHeight="57dp"
+            android:numStars="5"
+            android:paddingLeft="@dimen/car_ui_padding_4"
+            android:paddingTop="@dimen/car_ui_padding_4"
+            android:paddingRight="@dimen/car_ui_padding_4"
+            android:paddingBottom="@dimen/car_ui_padding_4"
+            android:progressBackgroundTint="#39596A"
+            android:progressTint="#FFCA45"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:stepSize="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/imageView33"
+            app:layout_constraintEnd_toStartOf="@+id/textView34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewposter" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Add to favorites"
+            android:textColor="#D4DADD"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewposter" />
+
+        <ImageView
+            android:id="@+id/likebutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="88dp"
+            android:src="@drawable/likebutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+        <ImageView
+            android:id="@+id/imageView33"
+            android:layout_width="446dp"
+            android:layout_height="393dp"
+            android:src="@drawable/rectanglereview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+        <EditText
+            android:id="@+id/reviewtext"
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#39596A"
+            android:ems="10"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="Write down your review.."
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="#9CACB5"
+            android:textColorHint="#9CACB5"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView33" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/publishbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="44dp"
+            android:backgroundTint="#FFB703"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Publish"
+            android:textSize="13sp"
+            app:cornerRadius="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView33" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

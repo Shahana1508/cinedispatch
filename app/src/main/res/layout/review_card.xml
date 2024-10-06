@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="review"
+            type="com.example.cinedispatch.model.review.Review" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeColor="#E639596A"
+        android:layout_margin="4dp"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="#B339596A">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Review by"
+                android:textColor="#D8D8D8"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/accname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:text="@{review.authorDetails.username}"
+                android:textColor="#FFB703"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/textView23"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_gravity="center"
+                app:setRatingText="@{review.authorDetails.rating}"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:maxHeight="57dp"
+                android:progressBackgroundTint="#39596A"
+                android:minHeight="57dp"
+                android:numStars="5"
+                android:padding="0dp"
+                android:progressTint="#FFCA45"
+                android:rating="@{review.authorDetails.rating / 2}"
+                android:stepSize="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/reviews"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="26dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans"
+                android:maxLines="3"
+                android:text="@{review.content}"
+                android:textColor="#F5F5F5"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+                app:layout_constraintVertical_bias="0.088" />
+
+            <TextView
+                android:id="@+id/readmoretext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Read more>"
+                android:textColor="#FFB703"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reviews" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

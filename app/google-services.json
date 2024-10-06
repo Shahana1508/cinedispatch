@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "397504947919",
+    "project_id": "cinedispatch",
+    "storage_bucket": "cinedispatch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397504947919:android:e304e7055d2ad5242879ba",
+        "android_client_info": {
+          "package_name": "com.example.cinedispatch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN3fYPwZgJ-i8xnjTAV2FGJog2WLME3DA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
