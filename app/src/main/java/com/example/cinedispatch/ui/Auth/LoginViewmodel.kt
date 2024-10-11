@@ -45,7 +45,6 @@ class LoginViewmodel @Inject constructor(private val sharedPreferences: SharedPr
 
     fun getName(email: String){
         val docRef = db.collection("users").document(email)
-
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {

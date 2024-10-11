@@ -1,10 +1,9 @@
-package com.example.cinedispatch.ui
+package com.example.cinedispatch.utils
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.RadialGradient
 import android.util.AttributeSet
 import android.view.View
 import kotlin.random.Random

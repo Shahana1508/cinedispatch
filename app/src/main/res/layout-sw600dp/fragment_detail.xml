@@ -295,7 +295,7 @@
             app:layout_constraintTop_toBottomOf="@+id/castsrv"
             app:srcCompat="@drawable/ratingchartback" />
 
-        <com.example.cinedispatch.ui.Barchart
+        <com.example.cinedispatch.utils.Barchart
             android:id="@+id/bar_chart"
             android:layout_width="314dp"
             android:layout_height="111dp"

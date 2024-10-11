@@ -21,7 +21,6 @@ class ProfileMovieAdapter: ListAdapter<Movie_entity,ProfileMovieAdapter.ProfileM
         holder.profileMovieCardBinding.profilemoviecard.setOnClickListener {
             onclick(movie.movieID.toString())
         }
-
     }
     fun update(newlist:List<Movie_entity>){
         submitList(newlist)
