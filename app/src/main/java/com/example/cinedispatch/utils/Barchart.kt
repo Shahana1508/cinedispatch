@@ -69,7 +69,7 @@ class Barchart @JvmOverloads constructor(context: Context,
         val cornerRadius = 30f // Radius for rounded corners
 
         for (i in bins.indices) {
-            val left = (barSpacing * i * 2).toFloat()
+            val left = (barSpacing * i * 2)
             val right = left + barWidth
             val top = 0f // Top position of the background bar (start from the top)
             val filledTop = height - (bins[i].toFloat() / maxBinHeight * maxBarHeight)
